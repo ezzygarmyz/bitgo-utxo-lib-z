@@ -1,45 +1,45 @@
 const typeforce = require('typeforce');
 
 const coins = {
-  ZEC: 'zec',      // Zcash
-  BTCZ: 'btcz',    // BitcoinZ
-  LTZ: 'ltz',     // LitecoinZ
-  ZERC: 'zerc',    // ZeroClassic
-  ZER: 'zer',      // Zero
-  ZCL: 'zcl',      // Zclassic
+  BCH: 'bch',
+  BSV: 'bsv',
+  BTC: 'btc',
+  BTG: 'btg',
+  LTC: 'ltc',
+  ZEC: 'zec'
+};
+
+coins.isBitcoin = function (network) {
+  return typeforce.value(coins.BTC)(network.coin);
+};
+
+coins.isBitcoinCash = function (network) {
+  return typeforce.value(coins.BCH)(network.coin);
+};
+
+coins.isBitcoinSV = function (network) {
+  return typeforce.value(coins.BSV)(network.coin);
+};
+
+coins.isBitcoinGold = function (network) {
+  return typeforce.value(coins.BTG)(network.coin);
+};
+
+coins.isLitecoin = function (network) {
+  return typeforce.value(coins.LTC)(network.coin);
 };
 
 coins.isZcash = function (network) {
   return typeforce.value(coins.ZEC)(network.coin);
 };
 
-coins.isBitcoinZ = function (network) {
-  return typeforce.value(coins.BTCZ)(network.coin);
-};
-
-coins.isLitecoinZ = function (network) {
-  return typeforce.value(coins.LTZ)(network.coin);
-};
-
-coins.isZeroClassic = function (network) {
-  return typeforce.value(coins.ZERC)(network.coin);
-};
-
-coins.isZero = function (network) {
-  return typeforce.value(coins.ZER)(network.coin);
-};
-
-coins.isZclassic = function (network) {
-  return typeforce.value(coins.ZCL)(network.coin);
-};
-
 coins.isValidCoin = typeforce.oneOf(
-  coins.isZcash,
-  coins.isBitcoinZ,
-  coins.isLitecoinZ,
-  coins.isZeroClassic,
-  coins.isZero,
-  coins.isZclassic
+  coins.isBitcoin,
+  coins.isBitcoinCash,
+  coins.isBitcoinSV,
+  coins.isBitcoinGold,
+  coins.isLitecoin,
+  coins.isZcash
 );
 
 module.exports = coins;
