@@ -40,7 +40,7 @@ module.exports = {
       3: 0x5ba81b19,
       4: 0x76b809bb // Sapling
     },
-    coin: coins.BTCZ,
+    coin: coins.ZEC,
     isZcash: true
   },
 
@@ -59,7 +59,7 @@ module.exports = {
       3: 0x5ba81b19,
       4: 0x76b809bb // Sapling
     },
-    coin: coins.LTZ,
+    coin: coins.ZEC,
     isZcash: true
   },
 
@@ -79,7 +79,7 @@ module.exports = {
       3: 0x5c7b7d2f,
       4: 0x7a737763 // Spaling
     },
-    coin: coins.ZERC,
+    coin: coins.ZEC,
     isZcash: true
   },
 
@@ -99,7 +99,7 @@ module.exports = {
       3: 0x6f76727a,
       4: 0x7361707a // Cosmos
     },
-    coin: coins.ZER,
+    coin: coins.ZEC,
     isZcash: true
   },
 
@@ -118,7 +118,7 @@ module.exports = {
       3: 0x5ba81b19,
       4: 0x930b540d // Buttercup
     },
-    coin: coins.ZCL,
+    coin: coins.ZEC,
     isZcash: true
   }
 };
