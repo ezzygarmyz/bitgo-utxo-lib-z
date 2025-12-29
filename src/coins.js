@@ -1,11 +1,36 @@
+'use strict';
+
 const typeforce = require('typeforce');
 
 const coins = {
-  ZEC: 'zec'
+  ZEC: 'zec',
+  BTCZ: 'btcz',
+  LTZ: 'ltz',
+  ZCL: 'zcl',
+  ZERC: 'zerc',
+  ZER: 'zer',
+  GLINK: 'glink',
+  YEC: 'yec'
 };
 
+const ZCASH_FAMILY = new Set([
+  coins.ZEC,
+  coins.BTCZ,
+  coins.LTZ,
+  coins.ZCL,
+  coins.ZERC,
+  coins.ZER,
+  coins.GLINK,
+  coins.YEC
+]);
+
+
 coins.isZcash = function (network) {
-  return typeforce.value(coins.ZEC)(network.coin);
+  return (
+    network &&
+    typeof network.coin === 'string' &&
+    ZCASH_FAMILY.has(network.coin)
+  );
 };
 
 coins.isValidCoin = typeforce.oneOf(
@@ -13,3 +38,4 @@ coins.isValidCoin = typeforce.oneOf(
 );
 
 module.exports = coins;
+

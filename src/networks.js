@@ -40,7 +40,7 @@ module.exports = {
       3: 0x5ba81b19,
       4: 0x76b809bb // Sapling
     },
-    coin: coins.ZEC,
+    coin: coins.BTCZ,
     isZcash: true
   },
 
@@ -59,7 +59,7 @@ module.exports = {
       3: 0x5ba81b19,
       4: 0x76b809bb // Sapling
     },
-    coin: coins.ZEC,
+    coin: coins.LTZ,
     isZcash: true
   },
 
@@ -79,7 +79,7 @@ module.exports = {
       3: 0x5c7b7d2f,
       4: 0x7a737763 // Spaling
     },
-    coin: coins.ZEC,
+    coin: coins.ZERC,
     isZcash: true
   },
 
@@ -99,7 +99,7 @@ module.exports = {
       3: 0x6f76727a,
       4: 0x7361707a // Cosmos
     },
-    coin: coins.ZEC,
+    coin: coins.ZER,
     isZcash: true
   },
 
@@ -118,7 +118,45 @@ module.exports = {
       3: 0x5ba81b19,
       4: 0x930b540d // Buttercup
     },
-    coin: coins.ZEC,
+    coin: coins.ZCL,
+    isZcash: true
+  },
+
+  gemlink: {
+    messagePrefix: '\x18Gemlink Signed Message:\n',
+    bip32: {
+      public: 0x0488b21e,
+      private: 0x0488ade4
+    },
+    pubKeyHash: 0x1c28,
+    scriptHash: 0x1c2d,
+    wif: 0x80,
+    consensusBranchId: {
+      1: 0x00,
+      2: 0x00,
+      3: 0x5ba81b19,
+      4: 0x76b809bb, // Sapling
+    },
+    coin: coins.GLINK,
+    isZcash: true
+  },
+
+  ycash: {
+    messagePrefix: '\x18Ycash Signed Message:\n',
+    bip32: {
+      public: 0x0488b21e,
+      private: 0x0488ade4
+    },
+    pubKeyHash: 0x1c28,
+    scriptHash: 0x1c2c,
+    wif: 0x80,
+    consensusBranchId: {
+      1: 0x00,
+      2: 0x00,
+      3: 0x5ba81b19,
+      4: 0x374d694f // Ycash
+    },
+    coin: coins.YEC,
     isZcash: true
   }
 };
