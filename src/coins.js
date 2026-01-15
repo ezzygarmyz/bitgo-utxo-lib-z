@@ -10,7 +10,8 @@ const coins = {
   ZERC: 'zerc',
   ZER: 'zer',
   GLINK: 'glink',
-  YEC: 'yec'
+  YEC: 'yec',
+  FLUX: 'flux'
 };
 
 const ZCASH_FAMILY = new Set([
@@ -21,7 +22,8 @@ const ZCASH_FAMILY = new Set([
   coins.ZERC,
   coins.ZER,
   coins.GLINK,
-  coins.YEC
+  coins.YEC,
+  coins.FLUX
 ]);
 
 

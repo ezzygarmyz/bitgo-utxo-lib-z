@@ -158,5 +158,24 @@ module.exports = {
     },
     coin: coins.YEC,
     isZcash: true
+  },
+
+  flux: {
+    messagePrefix: '\x18Flux Signed Message:\n',
+    bip32: {
+      public: 0x0488b21e,
+      private: 0x0488ade4
+    },
+    pubKeyHash: 0x1cb8,
+    scriptHash: 0x1cbd,
+    wif: 0x80,
+    consensusBranchId: {
+      1: 0x00,
+      2: 0x00,
+      3: 0x5ba81b19,
+      4: 0x76b809bb // PON
+    },
+    coin: coins.FLUX,
+    isZcash: true
   }
 };
